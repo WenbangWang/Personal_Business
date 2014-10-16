@@ -5,6 +5,9 @@ app/components
 ## temp
 .tmp
 
+## Log
+npm-debug.log
+
 ## Intellij
 Personal_Business.iml
 .idea/workspace.xml
