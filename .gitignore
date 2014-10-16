@@ -1,0 +1,10 @@
+node_modules
+app/components
+
+Personal_Business.iml
+## Intellij folder
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/watcherTasks.xml
+.idea/dynamic.xml
+.idea/*
