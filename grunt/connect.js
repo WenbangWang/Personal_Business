@@ -10,6 +10,7 @@ module.exports = function (grunt) {
         local: {
             options: {
                 port: '<%= app.integration.connect.port %>',
+                protocol: 'http',
                 livereload: true, // TODO should this be set to a port number?
                 base: [
                     '<%= app.temp %>',
