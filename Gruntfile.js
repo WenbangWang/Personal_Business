@@ -13,7 +13,7 @@ module.exports = function (grunt) {
         styles: '<%= app.path %>/modules/**/styles/*.less',
         temp: '.tmp',
         test: {
-          path: 'test/app',
+          path: 'test',
           modules: '<%= app.test.path %>/**/*-spec.js'
         },
         components: {

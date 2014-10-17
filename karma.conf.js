@@ -25,13 +25,7 @@ module.exports = function (config) {
 
 
     // list of files to exclude
-    exclude: [
-      'app/modules/core/shell.js',
-      'app/modules/core/bootstrapper.js',
-      'app/components/**/require.config.js',
-      'app/components/**/component.js',
-      'app/components/requirejs/**'
-    ],
+    exclude: [],
 
 
     // test results reporter to use
