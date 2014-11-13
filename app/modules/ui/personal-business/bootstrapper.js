@@ -10,6 +10,9 @@ define (['./require-paths'], function (config) {
                 exports: 'angular'
             },
             angularRoute: ['angular'],
+            'angularCookies': {
+                deps: ['angular']
+            },
             angularBootstrap: ['angular'],
             underscore: { exports: '_' },
             stacktracejs: {exports: 'stracktracejs'}

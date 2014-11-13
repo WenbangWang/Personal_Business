@@ -5,6 +5,12 @@ app/components
 ## temp
 .tmp
 
+## Coverage
+coverage
+
+## Instrument
+instrument
+
 ## Log
 npm-debug.log
 

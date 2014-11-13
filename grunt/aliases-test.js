@@ -3,9 +3,23 @@ module.exports = function (grunt) {
 
     return {
         test: [
+            'clean:report',
             'jshint:gruntfile',
             'jshint:test',
-            'karma:unit'
+            'test:api',
+            'test:app'
+        ],
+
+        'test:app': [
+            'karma:app'
+        ],
+
+        'test:api': [
+            'clean:instrument',
+            'instrument',
+            'mochaTest',
+            'storeCoverage',
+            'makeReport'
         ]
     };
 

@@ -8,10 +8,14 @@ module.exports = function (grunt) {
         local: function () {
             grunt.log.ok('Starting Local Developer Workflow...');
             grunt.task.run([
-                'local:initialize',
-                'local:connect'
+                'concurrent:local'
             ]);
         },
+
+        'local:start': [
+            'local:initialize',
+            'local:connect'
+        ],
 
         'local:initialize': [
             'jshint:gruntfile',
@@ -21,17 +25,22 @@ module.exports = function (grunt) {
             'local:html'
         ],
 
-        'local:styles': ['less'],
+        'local:styles': ['less', 'copy:fonts'],
 
-        'local:javascript': ['jshint:modules'],
+        'local:javascript': ['jshint:modules', 'jshint:api'],
 
         'local:javascript:newer': ['newer:jshint:modules'],
 
         'local:html': ['targethtml:local'],
 
         'local:connect': [
+            'configureProxies:local',
             'connect:local',
             'watch'
+        ],
+
+        'nodemon:local': [
+            'nodemon:api'
         ]
     };
 };

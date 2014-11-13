@@ -1,3 +1,5 @@
 module.exports = {
-    local: ['<%= app.temp %>']
+    local: ['<%= app.temp %>'],
+    report: ['coverage'],
+    instrument: ['instrument']
 };

@@ -1,0 +1,50 @@
+<div class="vertical-center-body">
+    <div class="vertical-center-container">
+        <div ng-show="errorMessage" class="col-md-4 col-md-offset-4 horizontal-center text-danger">
+            {{errorMessage}}
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+            <form name="userLogin" ng-submit="loginSubmit()" novalidate class="form-horizontal container-fluid" role="form">
+                <div class="form-group row">
+                    <div class="col-md-8 no-floating"
+                         ng-class="{'has-error': userLogin.username.$dirty && userLogin.username.$invalid && !userLogin.username.$focused}">
+                        <input type="text"
+                               name="username"
+                               ng-model="username"
+                               ng-required="true"
+                               ng-minlength={{loginConstant.USERNAME_MIN}}
+                               ng-maxlength={{loginConstant.USERNAME_MAX}}
+                               ng-focus
+                               class="form-control"
+                               placeholder="User Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-8 no-floating"
+                         ng-class="{'has-error': userLogin.password.$dirty && userLogin.password.$invalid && !userLogin.password.$focused}">
+                        <input type="password"
+                               name="password"
+                               ng-model="password"
+                               ng-required="true"
+                               ng-minlength="{{loginConstant.PASSWORD_MIN}}"
+                               ng-maxlength={{loginConstant.PASSWORD_MAX}}
+                               ng-focus
+                               ng-popover
+                               class="form-control"
+                               placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-8 no-floating text-center">
+                        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-8 no-floating text-center">
+                        <button ng-click="loginReset();" type="reset" class="no-style-button">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

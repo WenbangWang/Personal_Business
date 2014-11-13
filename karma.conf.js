@@ -1,7 +1,3 @@
-// Karma configuration
-// Generated on Tue Feb 25 2014 11:27:36 GMT-0500 (EST)
-// (edited a few times since)
-
 module.exports = function (config) {
   'use strict';
   config.set({
@@ -16,11 +12,11 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      {pattern: 'app/modules/**/*.js', included: false},
-      {pattern: '.tmp/styles/*.css', included: false},
-      {pattern: 'test/modules/**/*-spec.js', included: false},
-      {pattern: 'app/components/**/*.js', included: false},
-      'test/test-main.js'
+        {pattern: 'app/components/**/*.js', included: false},
+        {pattern: 'app/modules/**/*.js', included: false},
+        {pattern: '.tmp/styles/*.css', included: false},
+        {pattern: 'test/app/modules/**/*-spec.js', included: false},
+      'test/app/app-test-main.js'
     ],
 
 
@@ -34,13 +30,13 @@ module.exports = function (config) {
 
     //Indicates Coverage Report should be generated for all the JS files mentioned in the dir path
     preprocessors: {
-      'app/modules/*/!(exam-state)/**/*.js': ['coverage']
+        'app/modules/**/*.js': ['coverage']
     },
 
     // Specifies the Format in which report should be generated
     coverageReporter: {
       reporters: [
-        {type: 'html', dir: 'report/coverage/'},
+        {type: 'html', dir: 'coverage/'},
         {type: 'text-summary'},
         {type: 'text'}
       ]

@@ -1,0 +1,47 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.y-scrollable {
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  width: calc(~"100% + 18px");
+}
+
+.vertical-center-body {
+  height: 100%;
+  width: 100%;
+  display: table;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+
+  & > .vertical-center-container {
+    height: 100%;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.horizontal-center {
+  text-align: center;
+}
+
+.no-floating {
+  float: none;
+  margin: 0 auto;
+}
+
+.no-style-button {
+  border: 0;
+  background: none;
+  outline: none;
+  color: #428bca;
+}

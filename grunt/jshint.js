@@ -11,11 +11,16 @@ module.exports = {
 
     modules: ['<%= app.modules %>'],
 
+    api: ['<%= api.path %>'],
+
     test: {
         options: {
-            jshintrc: '<%= app.test.path %>/.jshintrc'
+            jshintrc: 'test/.jshintrc'
         },
-        src: ['<%= app.test.modules %>']
+        src: [
+            '<%= app.test.modules %>',
+            '<%= api.path %>'
+        ]
     }
 
 };
