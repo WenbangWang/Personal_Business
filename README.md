@@ -2,7 +2,7 @@
 
 ```git init```
 
-```git remove add origin git@github.com:WenbangWang/Personal_Business.git```
+```git remote add origin git@github.com:WenbangWang/Personal_Business.git```
 
 ```git checkout dev```
 
